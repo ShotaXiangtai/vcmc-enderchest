@@ -1,0 +1,31 @@
+name: vcmc-enderchest
+version: '${project.version}'
+main: jp.vcmc.enderchest.VcmcEnderChestPlugin
+api-version: '26.3'
+folia-supported: true
+description: 'Expandable ender chest for Folia'
+
+permissions:
+  vcmcenderchest.command.open:
+    description: '/enderchest でエンダーチェストを開き、/enderchest info で自分の容量を見る'
+    default: true
+  vcmcenderchest.admin.info:
+    description: '/enderchest info <プレイヤー> でほかのプレイヤーの容量を見る'
+    default: op
+  vcmcenderchest.admin.expand:
+    description: '/enderchest expand で容量を増やす'
+    default: op
+  vcmcenderchest.admin.set:
+    description: '/enderchest set で容量を決める'
+    default: op
+  vcmcenderchest.admin.reload:
+    description: '/enderchest reload で設定を再読み込みする'
+    default: op
+  vcmcenderchest.admin:
+    description: 'vcmc-enderchest のすべての管理機能'
+    default: op
+    children:
+      vcmcenderchest.admin.info: true
+      vcmcenderchest.admin.expand: true
+      vcmcenderchest.admin.set: true
+      vcmcenderchest.admin.reload: true

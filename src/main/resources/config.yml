@@ -1,0 +1,34 @@
+# エンダーチェストの容量（枠数）。標準のエンダーチェストは 27 枠です。
+# 既定の容量。標準の 1.5 倍は 40.5 枠なので、切り上げて 41 枠にしています
+default-slots: 41
+# 容量の上限。/enderchest expand ではこれより増えません。
+# 54 枠を超えると、45 枠ずつのページに分けて表示します
+max-slots: 135
+
+# 日本語の文面（MiniMessage 形式）。空文字にすると送信しません
+# ほかの言語の文面は lang フォルダにあります。en.yml: English、zh_cn.yml: 简体中文、zh_tw.yml: 繁體中文（台灣）、zh_hk.yml: 繁體中文（香港）
+# プレイヤーのクライアントの言語設定に合わせて自動で切り替わります。変更後は /enderchest reload で反映されます。
+messages:
+  title: "<dark_purple>エンダーチェスト"
+  title-page: "<dark_purple>エンダーチェスト <dark_gray>(<page>/<pages>)"
+  locked-name: "<gray>未解放の枠"
+  locked-lore: "<dark_gray>容量を拡張すると使えます"
+  previous-name: "<yellow>前のページ"
+  next-name: "<yellow>次のページ"
+  info-name: "<aqua>容量: <capacity> 枠"
+  info-lore: "<gray>ページ <page> / <pages>"
+  hidden-items: "<yellow>容量を超えた枠に、アイテムが <count> 枠分保管されています。容量を増やすと表示されます。"
+  open-failed: "<red>エンダーチェストを開けませんでした。運営へお知らせください。"
+  player-only: "<red>このコマンドはプレイヤーのみ使用できます。"
+  player-not-found: "<red>プレイヤーが見つかりません: <player>"
+  info-self: "<gray>エンダーチェストの容量: <white><capacity> 枠</white>（上限 <max> 枠）"
+  info-other: "<gray><player> のエンダーチェスト: <white><capacity> 枠</white>（既定 <default> 枠、追加 <extra> 枠、上限 <max> 枠）"
+  expanded: "<green><player> のエンダーチェストを <added> 枠拡張しました（<before> → <after> 枠）。"
+  expanded-partly: "<yellow><player> のエンダーチェストは上限に達したため、<added> 枠だけ拡張しました（<before> → <after> 枠）。"
+  at-max: "<red><player> のエンダーチェストはすでに上限（<max> 枠）なので、拡張しませんでした。"
+  expanded-notice: "<green>エンダーチェストの容量が <added> 枠増えて、<after> 枠になりました。"
+  at-max-notice: "<red>エンダーチェストの容量が上限（<max> 枠）のため、拡張されませんでした。運営へお知らせください。"
+  set-done: "<green><player> のエンダーチェストの容量を <after> 枠にしました（以前は <before> 枠）。"
+  set-out-of-range: "<red>容量は <min>〜<max> 枠で指定してください。"
+  store-unavailable: "<red>capacity.yml を読み込めなかったため、容量を変更できません。コンソールを確認してください。"
+  reloaded: "<green>設定を再読み込みしました。"
